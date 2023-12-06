@@ -1,8 +1,14 @@
 const hexText = document.querySelector("#hexText");
+let currentDatetime = new Date();
+let currentTime = currentDatetime.toLocaleTimeString(navigator.language, {
+  hour: "2-digit",
+  minute: "2-digit",
+  second: "2-digit",
+});
 
 let changeBackground = () => {
-  let currentDatetime = new Date();
-  let currentTime = currentDatetime.toLocaleTimeString(navigator.language, {
+  currentDatetime = new Date();
+  currentTime = currentDatetime.toLocaleTimeString(navigator.language, {
     hour: "2-digit",
     minute: "2-digit",
     second: "2-digit",
